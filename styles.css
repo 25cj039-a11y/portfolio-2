@@ -1,0 +1,690 @@
+/* 1. CSS VARIABLES */
+
+:root {
+    --bg: #0b1020;
+    --surface: #141b32;
+    --surface-light: #1c2642;
+
+    --text: #f4f5ff;
+    --muted: #a6aec8;
+
+    --primary: #9b8cff;
+    --secondary: #55d6be;
+
+    --border: rgba(255, 255, 255, 0.1);
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    --radius: 18px;
+    --transition: 0.3s ease;
+
+    --max-width: 1150px;
+}
+
+
+/* 2. LIGHT THEME */
+
+[data-theme="light"] {
+    --bg: #f5f6ff;
+    --surface: #ffffff;
+    --surface-light: #eceeff;
+
+    --text: #171b32;
+    --muted: #626982;
+
+    --primary: #6853d9;
+    --secondary: #008f78;
+
+    --border: rgba(0, 0, 0, 0.1);
+
+    --shadow: 0 15px 40px rgba(30, 30, 60, 0.08);
+}
+
+
+/* 3. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 4. BODY STYLING */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+
+    transition: background var(--transition),
+                color var(--transition);
+}
+
+
+/* 5. COMMON ELEMENTS */
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+ul {
+    list-style: none;
+}
+
+.wrap {
+    width: min(90%, var(--max-width));
+    margin-inline: auto;
+}
+/* 6. ACCESSIBILITY */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 15px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+
+/* 7. HEADER */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* 8. BRAND NAME */
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -1px;
+}
+
+.brand::after {
+    content: ".";
+    color: var(--primary);
+}
+
+
+/* 9. NAVIGATION */
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--primary);
+}
+/* 10. HERO SECTION */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-block: 90px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    top: 60px;
+    right: 5%;
+
+    width: 260px;
+    height: 260px;
+
+    background: var(--primary);
+    opacity: 0.12;
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* HERO HEADING */
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+
+    line-height: 1.12;
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.lede {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    margin-bottom: 35px;
+}/* 10. HERO SECTION */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-block: 90px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    top: 60px;
+    right: 5%;
+
+    width: 260px;
+    height: 260px;
+
+    background: var(--primary);
+    opacity: 0.12;
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* HERO HEADING */
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+
+    line-height: 1.12;
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.lede {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    margin-bottom: 35px;
+}/* 10. HERO SECTION */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-block: 90px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    top: 60px;
+    right: 5%;
+
+    width: 260px;
+    height: 260px;
+
+    background: var(--primary);
+    opacity: 0.12;
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* HERO HEADING */
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+
+    line-height: 1.12;
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.lede {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    margin-bottom: 35px;
+}
+/* 11. BUTTON CONTAINER */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* 12. PRIMARY BUTTON */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 13px 27px;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: 700;
+
+    border: 1px solid var(--primary);
+
+    transition: transform var(--transition),
+                box-shadow var(--transition);
+}
+
+
+/* BUTTON HOVER EFFECT */
+
+.button:hover {
+    color: white;
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(120, 100, 255, 0.3);
+}
+
+
+/* SECONDARY BUTTON */
+
+.button.secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.button.secondary:hover {
+    background: var(--surface);
+    border-color: var(--primary);
+}/* 11. BUTTON CONTAINER */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* 12. PRIMARY BUTTON */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 13px 27px;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: 700;
+
+    border: 1px solid var(--primary);
+
+    transition: transform var(--transition),
+                box-shadow var(--transition);
+}
+
+
+/* BUTTON HOVER EFFECT */
+
+.button:hover {
+    color: white;
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(120, 100, 255, 0.3);
+}
+
+
+/* SECONDARY BUTTON */
+
+.button.secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.button.secondary:hover {
+    background: var(--surface);
+    border-color: var(--primary);
+}
+/* 13. PROJECT SECTION */
+
+main section:not(.hero) {
+    padding-block: 45px;
+}
+
+main h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+
+/* 14. CSS GRID LAYOUT */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* 15. PROJECT CARDS */
+
+.card {
+    height: 100%;
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform var(--transition),
+                border-color var(--transition),
+                background var(--transition);
+}
+
+
+/* CARD HOVER EFFECT */
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+
+/* CARD HEADING */
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+
+/* CARD DESCRIPTION */
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+
+/* CARD LINK */
+
+.card a {
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.card a::after {
+    content: " →";
+}
+/* 16. FOOTER */
+
+.site-footer {
+    margin-top: 80px;
+
+    padding-block: 35px;
+
+    background: var(--surface);
+
+    border-top: 1px solid var(--border);
+}
+
+.site-footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* FOOTER NAVIGATION */
+
+.site-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.site-footer a {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.site-footer a:hover {
+    color: var(--primary);
+}
+
+
+/* COPYRIGHT */
+
+.site-footer small {
+    color: var(--muted);
+}
+/* 17. TABLET RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .site-header .wrap {
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 15px;
+    }
+
+    .site-nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 430px;
+        padding-block: 65px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    /* Projects */
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+
+    .site-footer .wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* 18. MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+    .wrap {
+        width: 88%;
+    }
+
+    .site-header .wrap {
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 1.3rem;
+    }
+
+    .site-nav ul {
+        gap: 14px;
+    }
+
+    .site-nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding-block: 55px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .site-footer ul {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+/* 19. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

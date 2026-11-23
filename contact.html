@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Sruthi S</title>
+  <meta name="description" content="Contact Sruthi S about projects, internships or collaboration using this accessible, keyboard-friendly form.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.example.com/contact.html">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Sruthi S">
+  <meta property="og:description" content="Get in touch with Sruthi S.">
+  <meta property="og:url" content="https://www.example.com/contact.html">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Sruthi S</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <header>
+        <h1>Contact me</h1>
+        <p class="lede">Send a message and I’ll reply within two working days.</p>
+      </header>
+
+      <section aria-labelledby="form-title">
+        <h2 id="form-title" class="visually-hidden">Contact form</h2>
+        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="post" novalidate aria-describedby="form-note">
+          <p id="form-note">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+          <fieldset>
+            <legend>Your message</legend>
+
+            <div class="field">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="error" id="name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span aria-hidden="true">*</span>
+                <span class="hint">For example, name@example.com</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option value="project">Project enquiry</option>
+                <option value="job">Job or internship</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span aria-hidden="true">*</span>
+                <span class="hint">At least 10 characters</span></label>
+              <textarea id="message" name="message" required minlength="10" aria-describedby="message-error"></textarea>
+              <p class="error" id="message-error"></p>
+            </div>
+
+            <button class="button" type="submit">Send message</button>
+          </fieldset>
+          <div class="status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <aside aria-labelledby="other-title">
+        <h2 id="other-title">Other ways to reach me</h2>
+        <ul><li><a href="mailto:25cj039@skcet.ac.in">25cj039@skcet.ac.in</a></li></ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="https://github.com/25cj039-a11y">GitHub profile</a></li>
+          <li><a href="https://www.linkedin.com/in/25cj039-a11y">LinkedIn profile</a></li>
+          <li><a href="mailto:25cj039@skcet.ac.in">Email me</a></li>
+        </ul>
+      </nav>
+      <p><small>&copy; <time datetime="2026">2026</time> Sruthi S</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

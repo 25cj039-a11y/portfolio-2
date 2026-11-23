@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Sruthi S</title>
+  <meta name="description" content="Selected web projects by Sruthi S, each built with semantic HTML5, ARIA, and tested for WCAG accessibility.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.example.com/projects.html">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Sruthi S">
+  <meta property="og:description" content="Accessible web projects by Sruthi S.">
+  <meta property="og:url" content="https://www.example.com/projects.html">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Sruthi S</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <header>
+        <h1>Projects</h1>
+        <p class="lede">Each project uses semantic markup and was tested with a keyboard.</p>
+      </header>
+
+      <section aria-labelledby="work-title">
+        <h2 id="work-title" class="visually-hidden">Project list</h2>
+        <ul class="grid">
+          <li><article class="card" id="project-recipes" aria-labelledby="p1">
+            <h3 id="p1">Accessible recipe site</h3>
+            <p><time datetime="2026-03">March 2026</time></p>
+            <p>Multi-page site with a skip link and ordered recipe steps.</p>
+            <ul class="tags" aria-label="Technologies used"><li>HTML5</li><li>CSS</li><li>ARIA</li></ul>
+            <a href="https://github.com/25cj039-a11y/recipes">Source code for the recipe site</a>
+          </article></li>
+          <li><article class="card" id="project-planner" aria-labelledby="p2">
+            <h3 id="p2">Study planner</h3>
+            <p><time datetime="2026-07">July 2026</time></p>
+            <p>Weekly planner using an <code>aria-live</code> region.</p>
+            <ul class="tags" aria-label="Technologies used"><li>HTML5</li><li>JavaScript</li></ul>
+            <a href="https://github.com/25cj039-a11y/planner">Source code for the study planner</a>
+          </article></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="https://github.com/25cj039-a11y">GitHub profile</a></li>
+          <li><a href="https://www.linkedin.com/in/25cj039-a11y">LinkedIn profile</a></li>
+          <li><a href="mailto:25cj039@skcet.ac.in">Email me</a></li>
+        </ul>
+      </nav>
+      <p><small>&copy; <time datetime="2026">2026</time> Sruthi S</small></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sruthi S | Accessible Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Sruthi S, a web developer building accessible, semantic, SEO-friendly websites. Browse projects and get in touch.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.example.com/">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sruthi S | Accessible Web Developer Portfolio">
+  <meta property="og:description" content="Accessible, semantic websites and projects by Sruthi S.">
+  <meta property="og:url" content="https://www.example.com/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Sruthi S","url":"https://www.example.com/","jobTitle":"Web developer"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Sruthi S</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button"
+        aria-label="Switch to light theme">
+    ☀️
+</button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Hi, I’m Sruthi S. I build accessible, well-structured websites.</h1>
+        <p class="lede">I care about clean HTML, keyboard-friendly interfaces, and pages that work for everyone.</p>
+        <div class="actions">
+          <a class="button" href="projects.html">View my projects</a>
+          <a class="button secondary" href="contact.html">Contact me</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="featured-title">
+        <h2 id="featured-title">Featured projects</h2>
+        <ul class="grid">
+          <li><article class="card" aria-labelledby="f1">
+            <h3 id="f1">Accessible recipe site</h3>
+            <p>A keyboard-navigable recipe collection with landmark regions and high text contrast.</p>
+            <a href="projects.html#project-recipes">Read about the recipe site</a>
+          </article></li>
+          <li><article class="card" aria-labelledby="f2">
+            <h3 id="f2">Study planner</h3>
+            <p>A responsive planner that announces updates to screen readers using live regions.</p>
+            <a href="projects.html#project-planner">Read about the study planner</a>
+          </article></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="https://github.com/25cj039-a11y">GitHub profile</a></li>
+          <li><a href="https://www.linkedin.com/in/25cj039-a11y">LinkedIn profile</a></li>
+          <li><a href="mailto:25cj039@skcet.ac.in">Email me</a></li>
+        </ul>
+      </nav>
+      
+      <p><small>&copy; <time datetime="2026">2026</time> Sruthi S</small></p>
+    </div>
+  </footer>
+  <script>
+const toggle = document.getElementById("theme-toggle");
+
+// Load previously saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+}
+
+// Update button appearance
+function updateButton() {
+    const current = document.documentElement.getAttribute("data-theme");
+
+    const light = current === "light";
+
+    toggle.textContent = light ? "🌙" : "☀️";
+
+    toggle.setAttribute(
+        "aria-label",
+        light ? "Switch to dark theme" : "Switch to light theme"
+    );
+}
+
+// Switch themes when clicked
+toggle.addEventListener("click", () => {
+
+    const current = document.documentElement.getAttribute("data-theme");
+
+    const next = current === "light" ? "dark" : "light";
+
+    document.documentElement.setAttribute("data-theme", next);
+
+    localStorage.setItem("theme", next);
+
+    updateButton();
+});
+
+updateButton();
+</script>
+</body>
+</html>
